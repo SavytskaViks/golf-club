@@ -112,8 +112,21 @@ img {
 
 
 @media (min-width: 1220px) {
-    .header__container, .welcome__container {
+    .header__container, .welcome__container, 
+    .about-us__container, .facilities__cards {
         margin-inline: clamp(3px, calc((100vw - 1220px) * 0.4936 + 3px), 158px);
+    }
+}
+
+@media (min-width: 990px){
+    .header__burger {
+        display: none;
+    }
+    .header__nav {
+        display: flex;
+    }
+    .header__socials {
+        display: inline;
     }
 }
 
@@ -127,21 +140,27 @@ img {
     margin-top: -71px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 505px) {
     .welcome {
-        height: calc(100vh + 400px);
+        height: calc(100vh + 850px);
     }
 }
 
-@media (min-width: 990px){
-    .header__burger {
-        display: none;
+@media (min-width: 517px) {
+    .welcome {
+        height: calc(100vh + 800px);
     }
-    .header__nav {
-        display: flex;
+}
+
+@media (min-width: 525px) {
+    .welcome {
+        height: calc(100vh + 760px);
     }
-    .header__socials {
-        display: inline;
+}
+
+@media (min-width: 560px) {
+    .welcome {
+        height: calc(100vh + 720px);
     }
 }
 
@@ -175,6 +194,8 @@ img {
     font-weight: 700;
     text-decoration: none;
     border: solid 1px transparent;
+
+    text-align: center; 
 }
 
 .btn--color {
@@ -203,26 +224,6 @@ img {
     color: var(--color-main);
 }
 
-@media (min-width: 770px) {
-    .welcome__title {
-        font-size: 76px;
-        padding-top: 64px;
-    }
-}
-
-@media (min-width: 990px) {
-    .welcome__title {
-        font-size: 92px;
-        padding-top: 154px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .welcome__title {
-        padding-top: 122px;
-    }
-}
-
 .welcome__cards {
     padding-top: 64px
 }
@@ -233,6 +234,8 @@ img {
     background-color: var(--color-main);
     margin-bottom: 50px;
     padding-inline: 26px;
+    position: relative;
+    z-index: 1;
 }
 
 .welcome__card-icon {
@@ -266,4 +269,255 @@ img {
     font-weight: 400;
     padding-bottom: 28px;
     line-height: 1.6;
+}
+
+@media (min-width: 770px) {
+    .welcome {
+        height: calc(100vh + 300px);
+    }
+    .welcome__title {
+        font-size: 76px;
+        padding-top: 64px;
+    }
+    .welcome__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 116px;
+    }
+    .welcome__card {
+        width: 100%;
+        min-width: 154px;
+    }
+    .welcome__card-desc {
+        font-size: 15px;
+        line-height: 2;
+    }
+}
+
+@media (min-width: 990px) {
+    .welcome__title {
+        font-size: 92px;
+        padding-top: 154px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome__title {
+        padding-top: 122px;
+    }
+}
+
+.about-us {
+    background-color: rgb(251, 248, 239);
+    margin-top: -135px;
+    padding-bottom: 90px;
+}
+
+.about-us__container {
+    padding-top: 220px;
+    padding-inline: 24px;
+}
+
+.about-us__content {
+    margin-top: 50px;
+}
+
+.sub {
+    color: rgb(213, 182, 101);
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    margin-bottom: 18px;
+}
+
+.title {
+    color: rgb(19, 74, 86);
+    font-family: var(--font-family-main);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.desc {
+    color: rgb(41, 98, 110);
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.paragraph {
+    color: rgb(111, 119, 121);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.about-us__list {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.about-us__item {
+    color: rgb(41, 98, 110);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.about-us__item::before {
+    content: "";
+    display: inline-block;
+    background-image: url(images/tick.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.btn--learn {
+    background-color: rgb(19, 74, 86);
+    color: var(--color-main);
+    border-color: rgb(19, 74, 86);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+
+    display: block;
+    margin-top: 36px;
+}
+
+.btn--learn:hover {
+    background-color: rgb(213, 182, 101);
+    border-color: rgb(213, 182, 101);
+}
+
+@media (min-width: 770px) {
+    .about-us__container {
+        display: flex;
+        gap: 25px;
+        padding-top: 250px;
+    }
+    .about-us__image {
+        flex: 1;
+        width: 340px;
+        height: 360px;
+        display: block;
+        margin-top: 50px;
+    }
+    .about-us__content {
+        flex: 1;
+    }
+    .title {
+        font-size: 44px;
+    }
+}
+
+@media (min-width: 860px) {
+    .about-us__image {
+      height: 400px;  
+    }
+}
+
+@media (min-width: 950px) {
+    .about-us__image {
+      height: 450px;  
+    }
+}
+
+@media (min-width: 990px){
+    .title {
+        font-size: 50px;
+    }
+    .desc {
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .about-us__image {
+      height: 543px;  
+    }
+}
+
+.facilities__content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 90px;
+}
+
+@media (min-width: 1100px) {
+    .facilities__content-text {
+        padding-top: 115px;
+    }
+}
+
+.facilities__cards {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.facilities__card {
+    height: clamp(250px, 50vw, 554px);
+    width: clamp(200px, 40vw, 440px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    position: relative;
+}
+
+.facilities__card--beginner {
+    background-image: url(images/girl_player.webp);
+}
+
+.facilities__card--prof {
+    background-image: url(images/field);
+}
+
+.facilities__card--all {
+    background-image: url(images/balls);
+}
+
+.facilities__card-text {
+    width: 160px;
+    margin-top: auto;
+}
+
+@media (min-width: 560px) {
+    .facilities__card-text {
+        width: 180px;
+    }
+}
+
+.facilities__card-sub {
+    color: rgb(213, 182, 101);
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+}
+
+.facilities__card-title {
+    color: var(--color-main);
+    font-family: var(--font-family-main);
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 20px;
 }
