@@ -113,7 +113,9 @@ img {
 
 @media (min-width: 1220px) {
     .header__container, .welcome__container, 
-    .about-us__container, .facilities__cards {
+    .about-us__container, .facilities, 
+    .join__content
+     {
         margin-inline: clamp(3px, calc((100vw - 1220px) * 0.4936 + 3px), 158px);
     }
 }
@@ -520,4 +522,157 @@ img {
     font-size: 24px;
     font-weight: 400;
     margin-top: 20px;
+}
+
+@media (min-width: 990px) {
+    .facilities__cards {
+        padding-top: 14px;
+    }
+     .facilities__card {
+        height: clamp(352px, 50vw, 466px);
+        width: clamp(280px, 40vw, 370px);
+     }
+}
+
+.year {
+    margin-left: 20px;
+    margin-bottom: 110px;
+}
+
+.year__content {
+    margin-top: 66px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.year__content .title {
+    font-size: 30px;
+}
+
+.year__content .paragraph {
+    margin-top: 4px;
+}
+
+.year__content-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.year__content::before {
+    content: "";
+    display: inline-block;
+    background-color: #FBF8EF;    
+    height: 50px;
+    width: 50px;
+    background-size: 60% 60%;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.year__content--1981::before {
+    background-image: url(images/icons/player.svg);
+}
+
+.year__content--1990::before {
+    background-image: url(images/icons/golf-ball.svg);
+}
+
+.year__content--2005::before {
+    background-image: url(images/icons/t-shirt.svg);
+}
+
+.year__content--2018::before {
+    background-image: url(images/icons/location.svg);
+}
+
+@media (min-width: 800px) {
+    .year {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .year__content::before {  
+        height: 70px;
+        width: 70px;
+        background-size: 50% 50%;
+        border-radius: 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .year {
+        gap: 50px;
+    }
+    .year__content {
+        margin-bottom: 5px;
+    }
+}
+
+.join {
+    background-color: rgb(19, 74, 86);
+}
+
+.join__content {
+    padding: 60px 20px 80px;
+}
+
+.join__content-title {
+    color: #FFFFFF;
+    font-family: var(--font-family-main);
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.join__content-desc {
+    color: #FFFFFF;
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 65px;
+}
+
+
+.join__content-desc span {
+    color: rgb(213, 182, 101);
+    font-weight: 700;
+}
+
+@media (min-width: 770px) {
+    .join__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+   }
+   .join__content-title {
+        font-size: 44px;
+        padding-right: 30px;
+   }
+   .join__content-desc {
+        font-size: 15px;
+        max-width: 255px;
+        padding-top: 20px;
+   }
+}
+
+@media (min-width: 990px) {
+    .join__content-title {
+        font-size: 50px;
+        padding-right: 30px;
+   }
+   .join__content-desc {
+        font-size: 16px;
+        max-width: 466px;
+   }
+   .join .btn--color {
+        max-height: 45px;
+        font-size: 15px;
+        display: inline-flex;
+        align-items: center;
+   }
 }
