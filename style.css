@@ -114,7 +114,7 @@ img {
 @media (min-width: 1220px) {
     .header__container, .welcome__container, 
     .about-us__container, .facilities, 
-    .join__content, .top__content, .testimonials__content
+    .join__content, .top__content, .testimonials__content, .events
      {
         margin-inline: clamp(3px, calc((100vw - 1220px) * 0.4936 + 3px), 158px);
     }
@@ -1063,4 +1063,105 @@ img {
     .testimonials__content-date {
         font-size: 16px;
     }
+}
+
+.events__content {
+    padding: 86px 10px 20px;
+    text-align: center;
+}
+
+.events__content .title {
+    padding: 10px 0 0;
+}
+
+.events__content .desc {
+    padding-bottom: 60px;
+}
+
+.events__image {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.events__card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-inline: 26px;
+    margin-bottom: 90px;
+}
+
+@media (min-width: 760px) {
+    .events__card-wrapper {
+        margin-inline: 38px;
+    }
+}
+
+.events__card {
+    border: solid 2px rgb(251, 248, 239);
+    padding: 26px;
+    margin-top: 16px;
+    text-align: left;
+    flex: 1 1 clamp(200px, 45%, 437px);
+}
+
+.events__card-sub {
+    color: rgb(41, 98, 110);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    font-style: italic;
+}
+
+.events__card-title {
+    color: rgb(19, 74, 86);
+    font-family: var(--font-family-main);
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.events__card-desc {
+    color: rgb(111, 119, 121);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.events__card .btn--color {
+    padding: 8px 20px;
+}
+
+.events__card .btn--color:hover {
+    background-color: rgb(19, 74, 86);
+    color: #FFFFFF;
+    border-color: rgb(19, 74, 86);
+}
+
+@media (min-width: 990px) {
+    .events__wrapper {
+        display: flex;
+    }
+    .events__image {
+        width: 27%;
+        height: 466px;
+        object-fit: cover;
+        margin: 18px 10px 0 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .events__image {
+        width: 30%;
+        height: 536px;
+    }
+}
+
+.blog {
+    background-color: #FBF8EF;
+}
+
+.blog__content {
+    text-align: center;
+    padding-top: 80px;
 }
